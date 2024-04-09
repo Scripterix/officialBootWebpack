@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap w/ Webpack</title>
+</head>
+
+<body>
+  <div class="container py-4 px-3 mx-auto">
+    <h1 class="display-5">Hello, Bootstrap and Webpack ! !</h1>
+    <p class="lead">Włącz watch mode <kbd>npm run watch</kbd></p>
+    <button class="btn btn-primary mt-2" id="btn">Primary button !</button>
+    <p class="fs-2 mt-4 hidden" id="textContent">Toggle / DisToggle</p>
+  </div>
+
+  <script>
+    const textContent = document.getElementById('textContent');
+    const btn = document.getElementById('btn');
+
+
+    btn.addEventListener('click', () => {
+      textContent.classList.toggle('hidden');
+      console.log("Webpack works...");
+    });
+  </script>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
